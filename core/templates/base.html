@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Meu Projeto Django{% endblock %}</title>
+    <!-- Links para CSS -->
+    {% block styles %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <h1>Meu Projeto Django</h1>
+        <!-- Barra de navegação ou outros elementos do cabeçalho -->
+    </header>
+
+    <main>
+        <!-- O conteúdo da página específica será inserido aqui -->
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2023 Meu Projeto Django</p>
+    </footer>
+
+    <!-- Links para JavaScript -->
+    {% block scripts %}
+    <script src="{% static 'js/main.js' %}"></script>
+    {% endblock %}
+</body>
+</html>

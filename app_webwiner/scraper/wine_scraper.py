@@ -9,7 +9,7 @@ import sys
 from ..models import Wine
 
 
-class WineScapper:
+class WineScrapper:
     BASE_URL = "https://www.wine.com.br/vinhos/cVINHOS"
     
     def __init__(self):
@@ -75,14 +75,7 @@ class WineScapper:
                 except json.JSONDecodeError:
                     print("Erro ao decodificar JSON para produto:", titulo)
         pprint.pprint(dados_dos_produtos)
-        return "data"
-
-
-print(sys.prefix)
-scrap = WineScapper()
-pprint.pprint (scrap.scraper())
-        
-        
-
+        # salvar os dados no banco de dados aqui
+        return dados_dos_produtos
 
     
